@@ -22,15 +22,10 @@ export const Achievements = () => {
   return (
     <section className="w-full px-6 py-16">
       <div className="flex items-center justify-center mb-10">
-        <h1
-          className="text-5xl font-bold text-[#7c86ff]"
-          
-        >
-          Achievements
-        </h1>
+        <h1 className="text-5xl font-bold text-[#7c86ff]">Achievements</h1>
       </div>
 
-      <div className="flex overflow-x-auto justify-center  space-x-6 px-2 scrollbar-thin scrollbar-thumb-purple-500 scrollbar-track-gray-800">
+      <div className="flex overflow-x-auto space-x-6 px-2 pb-4 scrollbar-thin scrollbar-thumb-purple-500 scrollbar-track-gray-800 snap-x snap-mandatory">
         {achievements.map((item, index) => (
           <div
             key={index}
@@ -39,7 +34,7 @@ export const Achievements = () => {
                 window.location.href = item.link;
               }
             }}
-            className="min-w-[300px] w-[384px] bg-gradient-to-br from-gray-900 to-black border border-purple-700 rounded-2xl shadow-lg hover:shadow-[0_0_20px_rgba(168,85,247,0.8)] transition-all duration-300"
+            className="min-w-[300px] w-[384px] snap-center bg-gradient-to-br from-gray-900 to-black border border-purple-700 rounded-2xl shadow-lg hover:shadow-[0_0_20px_rgba(168,85,247,0.8)] transition-all duration-300"
           >
             <img
               src={item.img}
